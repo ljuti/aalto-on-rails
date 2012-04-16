@@ -1,6 +1,8 @@
 class Todo < ActiveRecord::Base
   attr_accessible :completed, :title
 
+  scope :open, where(completed: false)
+
   # Old style
   validates_presence_of :title
   validates_length_of :title, minimum: 5
