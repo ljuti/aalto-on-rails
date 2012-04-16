@@ -18,4 +18,10 @@ class TodosController < ApplicationController
   def edit
     respond_with @todo = Todo.find(params[:id])
   end
+
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update_attributes(params[:todo])
+    respond_with @todo
+  end
 end
