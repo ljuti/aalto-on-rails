@@ -5,3 +5,7 @@
   %ul
     = list_of @todos.each do |todo|
       = todo.title
+  .stats
+    - if @todos.any?
+      = @todos.count
+      items

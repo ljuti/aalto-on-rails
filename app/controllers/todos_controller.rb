@@ -8,6 +8,6 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(params[:todo])
     @todo.save
-    respond_with @todo
+    respond_with @todo, location: todos_path
   end
 end

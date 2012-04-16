@@ -14,8 +14,21 @@ input[type=text] {
 .todos ul {
   list-style: none;
   margin: 0;
+  border-top: 1px solid #ccc;
 
   li {
-  
+    margin: 1em 0;
+    padding-bottom: 1.25em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ccc;
   }
+}
+
+.todos {
+  .stats {
+    padding: 1em;
+    background: #F4FCE8;
+    font-weight: bold;
+  }
+
 }
