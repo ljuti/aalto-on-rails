@@ -1,0 +1,27 @@
+!!!
+%html{ lang: "en" }
+  %head
+    %title Todo App
+    %meta{ charset: "utf-8" }
+    %meta{ content: "IE=edge,chrome=1", :"http-equiv" => "X-UA-Compatible"}
+    %meta{ content: "width=device-width, initial-scale=1.0, user-scalable=no", name: "viewport"}
+    %meta{ content: "noindex, nofollow", name: "robots"}
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = yield :head
+  %body
+    .container{ role: "main" }
+      %header.row
+        .span8.offset2.wrapper
+          %h1.logo
+            = link_to "My Todos", root_path
+      .content.row
+        .span8.offset2.wrapper
+          - if notice
+            %p#flash.notice= notice
+          - if alert
+            %p#flash.alert= alert
+
+          = yield
