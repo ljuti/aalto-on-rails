@@ -7,4 +7,8 @@ class Todo < ActiveRecord::Base
 
   # Rails 3 style
   validates :title, presence: true, length: { minimum: 5 }
+
+  def done?
+    completed?
+  end
 end
