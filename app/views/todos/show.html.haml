@@ -1,0 +1,12 @@
+.todo-show
+  %h2= @todo.title
+  %h3
+    %span STATE
+    = @todo.completed? ? "Done" : "Open"
+  %p
+    Created at:
+    = time_ago_in_words(@todo.created_at)
+    ago
+  .btn-group
+    = link_to "Edit", edit_todo_path(@todo), class: "btn"
+    = link_to "Remove", todo_path(@todo), method: :delete, confirm: "Do you really want to delete this?", class: "btn"

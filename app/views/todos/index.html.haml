@@ -4,7 +4,7 @@
 .todos
   %ul
     = list_of @todos.each do |todo|
-      = todo.title
+      = link_to todo.title, todo
   .stats
     - if @todos.any?
       = @todos.count

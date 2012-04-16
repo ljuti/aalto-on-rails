@@ -21,6 +21,10 @@ input[type=text] {
     padding-bottom: 1.25em;
     font-size: 1.5em;
     border-bottom: 1px solid #ccc;
+    
+    a {
+      font-weight: bold;
+    }
   }
 }
 
@@ -31,4 +35,18 @@ input[type=text] {
     font-weight: bold;
   }
 
+}
+
+.todo-show {
+  margin: 3em 0;
+  
+  h3 {
+    span {
+      color: #999;
+    }
+  }
+  
+  .btn-group {
+    margin: 1.5em 0;
+  }
 }

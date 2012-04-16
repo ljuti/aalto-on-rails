@@ -10,4 +10,8 @@ class TodosController < ApplicationController
     @todo.save
     respond_with @todo, location: todos_path
   end
+
+  def show
+    respond_with @todo = Todo.find(params[:id])
+  end
 end
