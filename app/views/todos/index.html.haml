@@ -1,2 +1,7 @@
 = simple_form_for Todo.new do |f|
   = f.input :title, label: false, placeholder: "What needs to be done ..."
+
+.todos
+  %ul
+    = list_of @todos.each do |todo|
+      = todo.title

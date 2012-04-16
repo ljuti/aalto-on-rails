@@ -4,4 +4,10 @@ class TodosController < ApplicationController
   def index
     respond_with @todos = Todo.all
   end
+
+  def create
+    @todo = Todo.new(params[:todo])
+    @todo.save
+    respond_with @todo
+  end
 end
