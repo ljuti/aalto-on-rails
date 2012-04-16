@@ -1,0 +1,3 @@
+== Welcome to TODO App
+
+This is an example application for Aalto Web Apps course.
