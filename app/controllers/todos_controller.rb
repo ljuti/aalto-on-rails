@@ -5,6 +5,10 @@ class TodosController < ApplicationController
     respond_with @todos = Todo.all
   end
 
+  def all
+    respond_with @todos = Todo.all, template: "todos/index"
+  end
+
   def create
     @todo = Todo.new(params[:todo])
     @todo.save

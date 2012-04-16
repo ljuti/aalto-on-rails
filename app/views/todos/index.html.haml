@@ -1,3 +1,7 @@
+.filters
+  = link_to "All todos", all_todos_path
+  = link_to "Open todos", todos_path
+
 = render "form", todo: Todo.new
 
 .todos
