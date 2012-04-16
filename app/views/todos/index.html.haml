@@ -4,6 +4,9 @@
   %ul
     = list_of @todos.each do |todo|
       = link_to todo.title, todo
+      %span.state= state_of_todo(todo.done?)
+      .btn-group
+        = link_to "Complete", complete_todo_path(todo), class: "btn", method: :post
   .stats
     - if @todos.any?
       = @todos.count

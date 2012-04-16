@@ -21,6 +21,18 @@ input[type=text] {
     padding-bottom: 1.25em;
     font-size: 1.5em;
     border-bottom: 1px solid #ccc;
+
+    span.state {
+      font-size: 0.75em;
+      color: #666;
+    }
+
+    .btn-group {
+      float: right;
+      a {
+        font-weight: normal;
+      }
+    }
     
     a {
       font-weight: bold;
@@ -34,7 +46,6 @@ input[type=text] {
     background: #F4FCE8;
     font-weight: bold;
   }
-
 }
 
 .todo-show {
