@@ -11,4 +11,8 @@ class Todo < ActiveRecord::Base
   def done?
     completed?
   end
+
+  def complete!
+    self.update_attribute(:completed, true)
+  end
 end

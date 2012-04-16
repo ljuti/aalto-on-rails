@@ -30,4 +30,10 @@ class TodosController < ApplicationController
     @todo.destroy
     redirect_to todos_path
   end
+
+  def complete
+    @todo = Todo.find(params[:id])
+    @todo.complete!
+    respond_with @todo, location: todos_path
+  end
 end
