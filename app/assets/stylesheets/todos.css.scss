@@ -3,3 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
+
+input[type=text] {
+  font-size: 2em;
+  width: 20em;
+  height: 2em;
+  padding: 5px 10px;
+}
