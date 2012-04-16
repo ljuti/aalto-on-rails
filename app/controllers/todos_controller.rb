@@ -14,4 +14,8 @@ class TodosController < ApplicationController
   def show
     respond_with @todo = Todo.find(params[:id])
   end
+
+  def edit
+    respond_with @todo = Todo.find(params[:id])
+  end
 end

@@ -1,5 +1,4 @@
-= simple_form_for Todo.new do |f|
-  = f.input :title, label: false, placeholder: "What needs to be done ..."
+= render "form", todo: Todo.new
 
 .todos
   %ul
